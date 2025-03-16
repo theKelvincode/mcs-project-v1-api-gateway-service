@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mcs-project-spring-cloud-gateway
+
+#server port
+server:
+  port: 9090
+
+
+#actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
