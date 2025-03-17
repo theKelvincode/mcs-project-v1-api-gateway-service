@@ -1,6 +1,6 @@
 spring:
   application:
-    name: mcs-project-spring-cloud-gateway
+    name: API-GATEWAY
 
 #server port
 server:
@@ -16,3 +16,15 @@ management:
   endpoint:
     gateway:
       enabled: true
+
+#eureka client registration
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+logging:
+  level:
+    org.springframework.cloud.gateway.filter: DEBUG
